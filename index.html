@@ -7500,6 +7500,7 @@ a.anchor-link {
 </li>
 </ol>
 <p>Section X allows analysts to select a specific metric and repeatedly re-group visitors to test different experiment evaluation techniques. This section highlights some issues with underpowered tests on high variance,  low frequency metrics like purchase count. Finally, Section XI reviews sequential testing methods that mitigate some problems associated with underpowered tests and false positives.</p>
+<p><strong>Sequential testing aside, this notebook illustrates the importance of choosing a single experiment metric, re-testing p-values above .01, and using 99% confidence intervals for websites performing many experiments as suggested by practitioners like Ron Kohavi. Moreover, analysts should make sure stakeholders understand uncertainty reflected in confidence intervals and what they mean about impact estimates. Knowing this will helps stakeholders decide how certain they need to be given costs of implementing changes.</strong></p>
 <p>Since no actual experiment was run, the code selects an arbitrary evaluation page and aggregates user activity post evaluation page visit to the end of a selected experiment period. Inputs are variables. They can easily be changed to run code on any page or set of events for any period.</p>
 <p>Metrics evaluated are:  <strong>purchase</strong>, <strong>purchase quantity</strong>, <strong>purchase bookings</strong>, <strong>engagement minutes</strong>, <strong>daily unique page visits</strong>, <strong>scroll</strong>, <strong>view_item</strong>, <strong>view_promotion</strong>, <strong>add_to_cart</strong>, <strong>begin_checkout</strong>, <strong>select_item</strong>, and <strong>select_promotion</strong>.</p>
 <p><strong>Sections:</strong></p>
@@ -9998,7 +9999,7 @@ False Positive Rate: 4 %
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p><strong>Conclusion:</strong> These plots help visualize a major issue with high variance and underpowered experiments. Although we still get approximately a 95% error rate, the 5% false positives will look like very large effects (average 17% for purchase quantity). If your organization runs many tests, over time this greatly increase chances of an inflated effect wasting time and resources.</p>
-<p><strong>Note:</strong> The plot below shows how the likelihood of a false positive grows as more and more tests are run using a geometric cdf. A large false positive effect size becomes likley sooner than we'd expect when many underpowered tests are run.</p>
+<p><strong>Note:</strong> The plot below shows how the likelihood of a false positive grows as more and more tests are run using a geometric cdf. ie Geom(p=.05) A large false positive effect size becomes likley sooner than we'd expect when many underpowered tests are run.</p>
 </div>
 </div>
 </div>
