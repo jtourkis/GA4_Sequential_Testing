@@ -9424,7 +9424,7 @@ Unsurprisingly, starting the checkout process is independent of the quantity of 
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h1 id="IX.-Experiment-Metrics-Calculation">IX. Experiment Metrics Calculation<a class="anchor-link" href="#IX.-Experiment-Metrics-Calculation">¶</a></h1><p><strong>Goal:</strong> This section aggregates daily, user level treatment/control metrics accrued by visitors after landing on a selected evaluation page over a fake experiment period between 12/1/2020 to 12/14/2020.</p>
 <p>Using daily cumulative statistics, daily p-values are plotted for each metric using a traditional t-test method versus a sequential method (O'Brien Fleming two sided spending function).</p>
-<p>$\alpha' = 2 * (1- \Phi (\frac{\phi(1-\alpha/2)}{\sqrt{t}}) )$ = $2 * (1- \Phi (\frac{1.96}{\sqrt{t}}) )$ <strong>One Sided</strong></p>
+<p>$\alpha' = 2 * (1- \Phi (\frac{\phi^{-1}(1-\alpha/2)}{\sqrt{t}}) )$ = $2 * (1- \Phi (\frac{1.96}{\sqrt{t}}) )$ <strong>One Sided</strong></p>
 <p><strong>where</strong> t is the fraction completed. ie .8 for 80%</p>
 <p>Given no real experiment was run, we'd expect all p-values to be insignificant. However, because we have multiple comparisons and end tests long before recommended, the ttest method gives us a number of false postivies.</p>
 </div>
@@ -10299,8 +10299,8 @@ False Positive Rate: 4 %
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h3 id="iv.--O'Brien-Fleming-like-(DeMets)">iv.  O'Brien Fleming like (DeMets)<a class="anchor-link" href="#iv.--O'Brien-Fleming-like-(DeMets)">¶</a></h3><p><strong>a) Adjusted Alpha Threshold:</strong></p>
-<p>$\alpha' = 2 * (1- \Phi (\frac{\phi(1-\alpha/2)}{\sqrt{t}}) )$ One Sided (Georgiev Version)</p>
-<p>$\alpha' = 4 * (1- \Phi (\frac{\phi(1-\alpha/4)}{\sqrt{t}}) )$ Two Sided</p>
+<p>$\alpha' = 2 * (1- \Phi (\frac{\phi^{-1}(1-\alpha/2)}{\sqrt{t}}) )$ One Sided (Georgiev Version)</p>
+<p>$\alpha' = 4 * (1- \Phi (\frac{\phi^{-1}(1-\alpha/4)}{\sqrt{t}}) )$ Two Sided</p>
 <p><strong>where</strong> t is the fraction completed. ie .8 for 80%</p>
 <p><strong>Notes:</strong> Requires equally spaced looks. No requirement that number or timing of looks specified in advance. <strong>However, decision to implement should not be based on results.</strong></p>
 </div>
